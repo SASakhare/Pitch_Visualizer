@@ -25,7 +25,7 @@ LLM_MODELS = {
 
 
 IMAGE_MODELS_TO_USE = {
-    "model": "huggingface",
+    "model": "pollinations",
 }
 
 

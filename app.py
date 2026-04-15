@@ -6,7 +6,7 @@ import asyncio
 # import your functions
 from src.prompt_service import prompt_generates
 from utils.settings import IMAGE_MODELS_TO_USE
-
+from fastapi.staticfiles import StaticFiles
 # from src.image.pollinations import generate_all_images, to_base64
 
 from src.models.huggingface_models import generate_all_images_huggingface
@@ -14,6 +14,8 @@ from src.models.pollinations import generate_all_images_pollination
 from utils.utils import to_base64
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
