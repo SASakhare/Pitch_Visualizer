@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pitch Visualizer</title>
+</head>
+<body>
+
+<h1>Pitch Visualizer</h1>
+
+<form action="/generate" method="post">
+
+    <!-- USER INPUT -->
+    <label>Enter Story:</label><br>
+    <textarea name="text" rows="6" cols="60"
+        placeholder="Enter your story..."></textarea>
+
+    <br><br>
+
+    <!-- CONTEXT DROPDOWN -->
+    <label>Select Context:</label><br>
+    <select name="context">
+        <option value="business problem solution success">Business Problem → Solution → Success</option>
+        <option value="corporate transformation story">Corporate Transformation</option>
+        <option value="customer journey experience">Customer Journey</option>
+        <option value="data driven growth analytics">Data-driven Growth</option>
+        <option value="warehouse logistics operations">Warehouse Logistics</option>
+        <option value="startup scaling story">Startup Scaling</option>
+        <option value="product impact narrative">Product Impact</option>
+        <option value="digital transformation ai adoption">Digital AI Transformation</option>
+    </select>
+
+    <br><br>
+
+    <!-- STYLE DROPDOWN -->
+    <label>Select Style:</label><br>
+    <select name="style">
+        <option value="cinematic photorealistic">Cinematic Photorealistic</option>
+        <option value="modern clean minimal">Modern Clean</option>
+        <option value="futuristic sci-fi neon">Futuristic Sci-Fi</option>
+        <option value="classic vintage warm">Classic Vintage</option>
+        <option value="digital art vibrant">Digital Art</option>
+        <option value="illustration sketch style">Sketch Illustration</option>
+        <option value="high contrast dramatic lighting">Dramatic Lighting</option>
+        <option value="soft pastel tones">Soft Pastel</option>
+        <option value="3d render ultra realistic">3D Render</option>
+        <option value="cartoon stylized">Cartoon Stylized</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Generate Storyboard</button>
+
+</form>
+
+</body>
+</html>

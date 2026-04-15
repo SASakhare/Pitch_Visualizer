@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storyboard</title>
+</head>
+<body>
+
+<h1>Generated Storyboard</h1>
+
+<!-- SHOW SELECTED OPTIONS -->
+<div>
+    <p><strong>Context:</strong> {{context}}</p>
+    <p><strong>Style:</strong> {{style}}</p>
+</div>
+
+<hr>
+
+<!-- STORYBOARD GRID -->
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+
+    {% for item in storyboard %}
+        <div style="width:300px; border:1px solid #ccc; padding:10px; border-radius:10px;">
+
+            <img 
+                src="data:image/png;base64,{{item.image}}" 
+                width="100%" 
+                style="border-radius:8px;"
+            >
+
+            <p style="margin-top:10px; font-weight:bold;">
+                {{item.caption}}
+            </p>
+
+        </div>
+    {% endfor %}
+
+</div>
+
+<br><br>
+
+<!-- BACK BUTTON -->
+<a href="/" style="text-decoration:none;">
+    <button>⬅ Back</button>
+</a>
+
+</body>
+</html>

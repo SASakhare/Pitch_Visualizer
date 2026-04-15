@@ -1,0 +1,15 @@
+huggingface_hub
+fastapi[standard]
+google-genai
+groq
+xai-sdk
+Pillow
+uvicorn 
+jinja2 
+python-multipart
+
+
+
+
+
+
