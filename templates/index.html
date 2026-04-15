@@ -2,23 +2,31 @@
 <html>
 <head>
     <title>Pitch Visualizer</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
+<body class="body">
 
-<h1>Pitch Visualizer</h1>
+<div class="container">
 
-<form action="/generate" method="post">
+<h1 class="title">Pitch Visualizer</h1>
+
+<form action="/generate" method="post" class="form">
 
     <!-- USER INPUT -->
-    <label>Enter Story:</label><br>
-    <textarea name="text" rows="6" cols="60"
-        placeholder="Enter your story..."></textarea>
+    <label class="label">Enter Story:</label><br>
+    <textarea 
+        name="text" 
+        rows="6" 
+        cols="60"
+        placeholder="Enter your story..."
+        class="textarea"
+    ></textarea>
 
     <br><br>
 
     <!-- CONTEXT DROPDOWN -->
-    <label>Select Context:</label><br>
-    <select name="context">
+    <label class="label">Select Context:</label><br>
+    <select name="context" class="select">
         <option value="business problem solution success">Business Problem → Solution → Success</option>
         <option value="corporate transformation story">Corporate Transformation</option>
         <option value="customer journey experience">Customer Journey</option>
@@ -32,8 +40,8 @@
     <br><br>
 
     <!-- STYLE DROPDOWN -->
-    <label>Select Style:</label><br>
-    <select name="style">
+    <label class="label">Select Style:</label><br>
+    <select name="style" class="select">
         <option value="cinematic photorealistic">Cinematic Photorealistic</option>
         <option value="modern clean minimal">Modern Clean</option>
         <option value="futuristic sci-fi neon">Futuristic Sci-Fi</option>
@@ -48,9 +56,13 @@
 
     <br><br>
 
-    <button type="submit">Generate Storyboard</button>
+    <button type="submit" class="button">
+        Generate Storyboard
+    </button>
 
 </form>
+
+</div>
 
 </body>
 </html>
