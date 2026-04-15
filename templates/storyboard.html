@@ -2,32 +2,34 @@
 <html>
 <head>
     <title>Storyboard</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
+<body class="body">
 
-<h1>Generated Storyboard</h1>
+<div class="container">
+
+<h1 class="title">Generated Storyboard</h1>
 
 <!-- SHOW SELECTED OPTIONS -->
-<div>
+<div class="meta">
     <p><strong>Context:</strong> {{context}}</p>
     <p><strong>Style:</strong> {{style}}</p>
 </div>
 
-<hr>
+<hr class="divider">
 
 <!-- STORYBOARD GRID -->
-<div style="display:flex; flex-wrap:wrap; gap:20px;">
+<div class="grid">
 
     {% for item in storyboard %}
-        <div style="width:300px; border:1px solid #ccc; padding:10px; border-radius:10px;">
+        <div class="card">
 
             <img 
                 src="data:image/png;base64,{{item.image}}" 
-                width="100%" 
-                style="border-radius:8px;"
+                class="image"
             >
 
-            <p style="margin-top:10px; font-weight:bold;">
+            <p class="caption">
                 {{item.caption}}
             </p>
 
@@ -39,9 +41,11 @@
 <br><br>
 
 <!-- BACK BUTTON -->
-<a href="/" style="text-decoration:none;">
-    <button>⬅ Back</button>
+<a href="/" class="back-link">
+    <button class="back-button">⬅ Back</button>
 </a>
+
+</div>
 
 </body>
 </html>
